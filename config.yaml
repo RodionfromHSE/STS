@@ -1,0 +1,24 @@
+datasets:
+  stsb_train:
+    hf_params:
+      path: stsb_multi_mt
+      name: en
+      split: train
+
+  stsb_val:
+    hf_params:
+      path: stsb_multi_mt
+      name: en
+      split: test
+
+
+models:
+  mini_lm:
+    st_params:
+      path: 'paraphrase-MiniLM-L6-v2'
+  
+  pp_roberta:
+    st_params:
+      path: "sentence-transformers/paraphrase-distilroberta-base-v1"
+
+      
