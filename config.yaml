@@ -25,5 +25,6 @@ models:
 
 
 configs:
-  embeddings: '${root}/configs/embeddings.yaml'
+  models_comparison: '${root}/configs/models_comparison.yaml'
+  fine_tune: '${root}/configs/fine_tune.yaml'
 

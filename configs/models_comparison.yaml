@@ -1,0 +1,4 @@
+dataset: stsb_val
+models: 
+  - mini_lm
+  - pp_roberta
