@@ -1,3 +1,5 @@
+root: /Users/user010/Desktop/Programming/ML/STS
+
 datasets:
   stsb_train:
     hf_params:
@@ -15,10 +17,13 @@ datasets:
 models:
   mini_lm:
     st_params:
-      path: 'paraphrase-MiniLM-L6-v2'
+      model_name_or_path: 'paraphrase-MiniLM-L6-v2'
   
   pp_roberta:
     st_params:
-      path: "sentence-transformers/paraphrase-distilroberta-base-v1"
+      model_name_or_path: "sentence-transformers/paraphrase-distilroberta-base-v1"
 
-      
+
+configs:
+  embeddings: '${root}/configs/embeddings.yaml'
+
