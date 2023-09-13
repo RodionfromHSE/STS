@@ -13,18 +13,51 @@ datasets:
       name: en
       split: test
 
+  stacktraces:
+    path: ${root}/dataset/stacktraces.json
+
+  stacktraces_hf:
+    hf_params:
+      path: "under-tree/stacktrace_dataset"
+
+    hf_save_params:
+      repo_id: "under-tree/stacktrace_dataset"
+  
+  sts_traces:
+    hf_params:
+      path: "under-tree/sts_traces"
+
+    hf_save_params:
+      repo_id: "under-tree/sts_traces"
 
 models:
   mini_lm:
     st_params:
       model_name_or_path: 'paraphrase-MiniLM-L6-v2'
+    
+    hf_params:
+      model:
+        pretrained_model_name_or_path: 'sentence-transformers/paraphrase-MiniLM-L6-v2'
+      tokenizer:
+        pretrained_model_name_or_path: 'sentence-transformers/paraphrase-MiniLM-L6-v2'
   
   pp_roberta:
     st_params:
       model_name_or_path: "sentence-transformers/paraphrase-distilroberta-base-v1"
 
+  codebert:
+    hf_params:
+      model:
+        pretrained_model_name_or_path: "microsoft/codebert-base"
+      tokenizer:
+        pretrained_model_name_or_path: "microsoft/codebert-base"
+
+  
+
 
 configs:
   models_comparison: '${root}/configs/models_comparison.yaml'
   fine_tune: '${root}/configs/fine_tune.yaml'
+  dataset: '${root}/configs/dataset.yaml'
+  scoring: '${root}/configs/scoring.yaml'
 

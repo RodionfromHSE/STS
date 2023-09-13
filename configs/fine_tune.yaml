@@ -1,3 +1,4 @@
 model: mini_lm
 dataset: stsb_train
+val_dataset: stsb_val
 hf_model_repo: 'under-tree/STS-model'

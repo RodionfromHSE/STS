@@ -1,0 +1,14 @@
+root: ???
+dataset: stacktraces_hf
+save_dataset: sts_traces
+model: mini_lm
+n_groups: 6000
+groups_path: ${root}/dataset/groups.json
+scores:
+  file: 0.15 # similarity between files
+  func: 0.15 # similarity between functions
+  edit: 0.1 # edit distance between functions
+  msg: 0.2 # similarity between error messages
+  err: 0.4 # similarity between error types
+
+

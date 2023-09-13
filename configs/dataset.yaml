@@ -1,0 +1,5 @@
+dataset: stacktraces
+n_samples: 25000 # amount of samples to take into the final dataset
+test_split: 0.2 # percentage of samples to use for testing
+save_dataset: stacktraces_hf
+
