@@ -52,12 +52,20 @@ models:
       tokenizer:
         pretrained_model_name_or_path: "microsoft/codebert-base"
 
+  distilbert:
+    hf_params:
+      model:
+        pretrained_model_name_or_path: "distilbert-base-uncased"
+      tokenizer:
+        pretrained_model_name_or_path: "distilbert-base-uncased"
+
   
 
 
 configs:
   models_comparison: '${root}/configs/models_comparison.yaml'
   fine_tune: '${root}/configs/fine_tune.yaml'
+  trace_tune: '${root}/configs/trace_tune.yaml'
   dataset: '${root}/configs/dataset.yaml'
   scoring: '${root}/configs/scoring.yaml'
 
